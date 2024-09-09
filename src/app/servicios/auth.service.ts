@@ -1,0 +1,45 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { Router } from "@angular/router";
+import { catchError, throwError } from "rxjs";
+import { environment } from 'src/environments/environment';
+
+const URL = environment.base_url;
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+
+  constructor(
+    //private http:HttpClient,
+    private router:Router
+  ) { }
+
+  singin (user:any) {
+    //return this.http.post<any>(this.URL+'/singin',user);
+    /*
+    return this.http.post<any>(URL+'/login',user).pipe(
+      catchError( e => {
+        if(e.status=400){
+          console.log('error:.....', e.error.error);
+          return throwError(e);
+        }
+
+      console.error(e);
+    //  Swal.fire('Error al crear', e.error.error, 'error');
+      return throwError(e);
+    })
+    )
+    */
+  }
+
+  loggedIn () {
+    return localStorage.getItem('token');
+  }
+
+  getToken () {
+    localStorage.getItem('token');
+  }
+
+}

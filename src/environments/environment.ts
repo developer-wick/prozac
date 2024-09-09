@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false
+  , base_url: ''
+  //, base_url: 'https://orca-app-kl4t4.ondigitalocean.app/api'
 };
 
 /*
