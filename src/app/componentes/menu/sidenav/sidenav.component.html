@@ -19,14 +19,13 @@
                 <mat-icon>arrow_drop_down_circle</mat-icon>Catalogos
             </mat-expansion-panel-header>
             <mat-nav-list>
-                <a mat-list-item routerLink="/cata/transportista" (click)="accordion.closeAll();">Transportista</a>
-                <a mat-list-item routerLink="/cata/tarifaembarque" (click)="accordion.closeAll();">Tarifa Embarque</a>
-                <a mat-list-item routerLink="/cata/tipocamion" (click)="accordion.closeAll();">Tipo Camion</a>
-                <a mat-list-item routerLink="/cata/tipoanticipo" (click)="accordion.closeAll();">Tipo Anticipo</a>
-                <a mat-list-item routerLink="/cata/unidadmedida" (click)="accordion.closeAll();">Unidad Medida</a>
-                <a mat-list-item routerLink="/cata/productos" (click)="accordion.closeAll();">Productos</a>
                 <a mat-list-item routerLink="/cata/camion" (click)="accordion.closeAll();">Camion</a>
+                <a mat-list-item routerLink="/cata/clientes" (click)="accordion.closeAll();">Clientes</a>
+                <a mat-list-item routerLink="/cata/costos" (click)="accordion.closeAll();">Costos</a>
+                <a mat-list-item routerLink="/cata/proveedores" (click)="accordion.closeAll();">Proveedores</a>
                 <a mat-list-item routerLink="/cata/pilotos" (click)="accordion.closeAll();">Pilotos</a>
+                <a mat-list-item routerLink="/cata/transporte" (click)="accordion.closeAll();">Transporte</a>
+                <a mat-list-item routerLink="/cata/unidadmedida" (click)="accordion.closeAll();">Unidad Medida</a>
             </mat-nav-list>
         </mat-expansion-panel>
 
@@ -35,10 +34,10 @@
                 <mat-icon>arrow_drop_down_circle</mat-icon>Procesos
             </mat-expansion-panel-header>
             <mat-nav-list>
-                <a mat-list-item routerLink="/home" (click)="accordion.closeAll();">Factura Registro</a>
-                <a mat-list-item routerLink="#" (click)="accordion.closeAll();">Poliza Registro</a>
-                <a mat-list-item routerLink="/home" (click)="accordion.closeAll();">Viajes Registro</a>
-                <a mat-list-item routerLink="#" (click)="accordion.closeAll();">Vale Registro</a>
+                <a mat-list-item routerLink="/proceso/solicitacompra" (click)="accordion.closeAll();">Solicitud de Compra</a>
+                <a mat-list-item routerLink="/proceso/detallecompra" (click)="accordion.closeAll();">Detalle de Compra</a>
+                <a mat-list-item routerLink="/proceso/registrocompra" (click)="accordion.closeAll();">Registro de Compra</a>
+                <a mat-list-item routerLink="/proceso/venta" (click)="accordion.closeAll();">Venta</a>
             </mat-nav-list>
         </mat-expansion-panel>
 
@@ -47,8 +46,8 @@
                 <mat-icon>arrow_drop_down_circle</mat-icon>Reportes
             </mat-expansion-panel-header>
             <mat-nav-list>
-                <a mat-list-item routerLink="/home" (click)="accordion.closeAll();">Combustible por Poliza</a>
-                <a mat-list-item routerLink="#" (click)="accordion.closeAll();">Poliza</a>
+                <a mat-list-item routerLink="/reporte/compras" (click)="accordion.closeAll();">Compras</a>
+                <a mat-list-item routerLink="/reporte/ventas" (click)="accordion.closeAll();">Ventas</a>
             </mat-nav-list>
         </mat-expansion-panel>
 
@@ -61,7 +60,7 @@
             </mat-nav-list>
         </mat-expansion-panel>
 
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/home" (click)="accordion.closeAll(); toggleSidebar();">
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/contacto" (click)="accordion.closeAll(); toggleSidebar();">
             <mat-icon>account_circle</mat-icon> Contacto
         </a>
 

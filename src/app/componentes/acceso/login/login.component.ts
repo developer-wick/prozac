@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   singin () {
     localStorage.setItem('token',this.user.usuario);
     localStorage.setItem('User', this.user.usuario);
-    //this.router.navigate(['/home']);
+    this.router.navigate(['/home']);
   }
 
 }

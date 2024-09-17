@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/acceso/login/login.component';
 
+import { AuthGuard } from "./guard/auth.guard";
+
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -19,13 +21,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { SidenavComponent } from './componentes/menu/sidenav/sidenav.component';
 import { HeaderComponent } from "./componentes/menu/header/header.component";
+import { HomeComponent } from './componentes/acceso/home/home.component';
+import { UsuariosComponent } from './componentes/administracion/usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SidenavComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,9 @@ import { HeaderComponent } from "./componentes/menu/header/header.component";
       MatCardModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
